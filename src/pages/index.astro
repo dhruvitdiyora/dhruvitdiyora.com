@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import { SITE, HOME, SOCIALS } from "@consts";
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <div class="flex flex-col md:flex-row items-start gap-8 py-8">
+      <div class="flex-1">
+        <h1 class="text-3xl font-bold mb-4 prose dark:prose-invert">
+          hi, i'm dhruvit 👋🏻
+        </h1>
+        <div class="prose dark:prose-invert">
+          <p class="text-lg">
+            a <span class="font-semibold">full stack developer</span>.
+            <!-- , currently
+            working at <span class="font-semibold">Infosys</span>. -->
+          </p>
+
+          <p class="text-lg mt-4">
+            i'm a computer engineer <span class="font-semibold"
+              >currently working at Infosys</span
+            >, i'm working on projects involving
+            <span class="font-semibold">machine learning and rag systems</span>.
+            and i'm particularly interested in:
+          </p>
+
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li><span class="font-semibold">system design</span></li>
+            <li><span class="font-semibold">distributed systems</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <div class="md:w-[300px] shrink-0">
+        <img
+          src="main.jpeg"
+          alt="Profile picture"
+          class="rounded-lg border-2 border-gray-200 dark:border-gray-700"
+          width="300"
+          height="400"
+        />
+      </div> -->
+    </div>
+  </Container>
+</PageLayout>
